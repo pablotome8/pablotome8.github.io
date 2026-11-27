@@ -14,6 +14,7 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=IBM+Plex+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
     <link rel="stylesheet" href="styles.css">
+    <script type="module" src="js/main.js"></script>
     <meta property="og:title" content="Pablo Tomé | Desarrollador Full Stack">
     <meta property="og:type" content="website">
     <meta property="og:description" content="Desarrollador Full Stack | Java, PHP, Node.js, JavaScript, PostgreSQL">
@@ -448,50 +449,6 @@
             </a>
         </div>
     </footer>
-
-    <script>
-        const headerEl = document.querySelector('.site-header');
-        const sections = Array.from(document.querySelectorAll('main > section[id]'));
-        const navLinks = new Map(
-            Array.from(document.querySelectorAll('.nav-link[href^="#"]'), (link) => [
-                link.getAttribute('href').slice(1),
-                link,
-            ])
-        );
-        const setCurrentSection = (id) => {
-            navLinks.forEach((link, key) => {
-                if (key === id) link.setAttribute('aria-current', 'location');
-                else link.removeAttribute('aria-current');
-            });
-        };
-        const updateCurrentSection = () => {
-            if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 24) {
-                setCurrentSection('contact');
-                return;
-            }
-            const headerHeight = headerEl ? headerEl.offsetHeight : 70;
-            const thresholdY = headerHeight + 96;
-            let activeId = sections[0]?.id || 'hero-section';
-            for (const section of sections) {
-                if (section.getBoundingClientRect().top <= thresholdY) {
-                    activeId = section.id;
-                }
-            }
-            setCurrentSection(activeId);
-        };
-        let ticking = false;
-        const onScrollOrResize = () => {
-            if (ticking) return;
-            ticking = true;
-            requestAnimationFrame(() => {
-                updateCurrentSection();
-                ticking = false;
-            });
-        };
-        window.addEventListener('scroll', onScrollOrResize, { passive: true });
-        window.addEventListener('resize', onScrollOrResize, { passive: true });
-        updateCurrentSection();
-    </script>
 </body>
 
 </html>
