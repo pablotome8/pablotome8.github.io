@@ -1,34 +1,22 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
   <defs>
-    <linearGradient id="bgPython" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#051c16" />
-      <stop offset="100%" stop-color="#0c2d38" />
-    </linearGradient>
-    <linearGradient id="pyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#38bdf8" />
-      <stop offset="100%" stop-color="#10b981" />
-    </linearGradient>
+    <radialGradient id="pythonGlow" cx="24%" cy="24%" r="70%">
+      <stop offset="0%" stop-color="#142821" />
+      <stop offset="100%" stop-color="#091310" />
+    </radialGradient>
   </defs>
-  <rect width="600" height="300" fill="url(#bgPython)"/>
-  <!-- Decorative Code Window -->
-  <rect x="50" y="45" width="260" height="210" rx="10" fill="#03120e" stroke="rgba(56,189,248,0.3)" stroke-width="1.5"/>
-  <circle cx="72" cy="65" r="4.5" fill="#ef4444"/>
-  <circle cx="88" cy="65" r="4.5" fill="#f59e0b"/>
-  <circle cx="104" cy="65" r="4.5" fill="#10b981"/>
-  <text x="70" y="98" font-family="monospace" font-size="12" fill="#e2e8f0"># 40 Katas &amp; Algoritmia</text>
-  <text x="70" y="125" font-family="monospace" font-size="11" fill="#38bdf8">class Arbol:</text>
-  <text x="85" y="145" font-family="monospace" font-size="11" fill="#10b981">def crecer_ramas(self):</text>
-  <text x="70" y="175" font-family="monospace" font-size="11" fill="#f59e0b">filter(lambda x: ...)</text>
-  <text x="70" y="200" font-family="monospace" font-size="11" fill="#94a3b8">reduce(operator.sub)</text>
-  <text x="70" y="225" font-family="monospace" font-size="12" fill="#38bdf8">katasPython.ipynb [OK]</text>
-  <!-- Jupyter notebook badge -->
-  <g transform="translate(360, 60)">
-    <!-- Jupyter Logo style rings -->
-    <ellipse cx="100" cy="80" rx="75" ry="40" fill="none" stroke="url(#pyGrad)" stroke-width="6" opacity="0.8"/>
-    <circle cx="45" cy="55" r="9" fill="#10b981"/>
-    <circle cx="155" cy="105" r="9" fill="#38bdf8"/>
-    <circle cx="100" cy="80" r="16" fill="rgba(16,185,129,0.2)"/>
-  </g>
-  <text x="455" y="215" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="700" font-size="22" fill="#f8fafc">Python Algorithms</text>
-  <text x="455" y="240" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="500" font-size="12" fill="#38bdf8">Jupyter Notebook • POO • Functional</text>
+  <rect width="640" height="360" fill="url(#pythonGlow)" />
+  <rect x="48" y="48" width="544" height="184" rx="10" fill="#0f1e19" stroke="#22d398" stroke-opacity="0.24" stroke-width="1" />
+  <text x="72" y="78" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="12" fill="#22d398">In [40]:</text>
+  <text x="142" y="78" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="12" fill="#9eb7ad">katasPython.ipynb · Type Hints &amp; POO</text>
+  <line x1="72" y1="92" x2="568" y2="92" stroke="#9eb7ad" stroke-opacity="0.16" stroke-width="1" />
+  <text x="72" y="120" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="12.5" fill="#22d398">class Arbol:</text>
+  <text x="92" y="144" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="12.5" fill="#eef5f2">def info_arbol(self) -&gt; dict[str, int | list[int]]:</text>
+  <text x="112" y="168" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="12.5" fill="#9eb7ad">ramas = list(filter(lambda r: r &gt; 0, self.ramas))</text>
+  <text x="72" y="194" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="12.5" fill="#eef5f2">saldo = reduce(lambda a, b: a + b, movimientos, 0)</text>
+  <text x="72" y="216" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="12" fill="#9eb7ad">except SaldoInsuficienteError as err: ...</text>
+
+  <rect x="48" y="248" width="544" height="64" rx="10" fill="#142821" stroke="#22d398" stroke-opacity="0.3" stroke-width="1" />
+  <text x="72" y="285" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="13" fill="#22d398">Out [40]:</text>
+  <text x="152" y="285" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="13" font-weight="600" fill="#eef5f2">40/40 katas verificadas · map · filter · reduce · POO</text>
 </svg>

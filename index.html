@@ -31,7 +31,7 @@
     <header class="site-header">
         <a class="brand" href="#hero-section" aria-label="Pablo Tomé — Inicio">
             <svg class="brand-mark" viewBox="0 0 32 32" width="36" height="36" aria-hidden="true" focusable="false">
-                <rect width="32" height="32" rx="7" fill="#0f1e19" stroke="#22d398" stroke-opacity="0.45"
+                <rect x="1" y="1" width="30" height="30" rx="6" fill="#0f1e19" stroke="#22d398" stroke-opacity="0.45"
                     stroke-width="1.5" />
                 <path
                     d="M7.5 22.5V9.5h5.1c2.7 0 4.3 1.4 4.3 3.9 0 2.5-1.6 4-4.3 4h-2.5v5.1H7.5zm2.6-7.3h2.3c1.2 0 1.9-.6 1.9-1.8 0-1.1-.7-1.7-1.9-1.7h-2.3v3.5zm9 7.3V11.8h-3.1V9.5h8.8v2.3h-3.1v10.7h-2.6z"
@@ -41,7 +41,8 @@
         </a>
         <nav aria-label="Navegación principal">
             <ul>
-                <li><a href="#hero-section" class="nav-link">Inicio</a></li>
+                <li class="nav-item-home"><a href="#hero-section" class="nav-link" aria-current="location">Inicio</a>
+                </li>
                 <li><a href="#about" class="nav-link">Sobre mí</a></li>
                 <li><a href="#projects" class="nav-link">Proyectos</a></li>
                 <li><a href="#contact" class="nav-link">Contacto</a></li>
@@ -55,10 +56,9 @@
                 <h1>Pablo Tomé</h1>
                 <p class="hero-role">Desarrollador Full Stack · Backend y Datos</p>
                 <p class="hero-lead">
-                    Estudiante de 2.º de DAW en Oviedo. Construyo aplicaciones web con
-                    <strong>Java, PHP, Node.js y JavaScript</strong>, bases de datos
-                    <strong>PostgreSQL y MongoDB</strong> en Docker y flujos de datos en <strong>Python</strong>.
-                    Disponible para prácticas y proyectos junior en Oviedo o remoto.
+                    Estudiante de 2.º de <strong>Desarrollo de Aplicaciones Web (DAW)</strong> en Oviedo. Diseño
+                    aplicaciones web orientadas a producto, bases de datos robustas y pipelines de datos listos para
+                    producción. Disponible para prácticas y puestos junior en Oviedo o remoto.
                 </p>
                 <div class="hero-actions">
                     <a href="#projects" class="btn-primary">Ver proyectos</a>
@@ -72,16 +72,14 @@
                 <div class="about-text">
                     <h2>Sobre mí</h2>
                     <p>
-                        Soy desarrollador de software y estudiante de segundo año de
-                        <span>Desarrollo de Aplicaciones Web (DAW)</span> en Oviedo. Trabajo el backend en
-                        <strong>Java</strong>, <strong>PHP</strong> y <strong>Node.js con Express</strong>, junto a
-                        interfaces semánticas y accesibles con <strong>HTML5, CSS3, Sass y JavaScript</strong>.
+                        Me formo en ingeniería web con foco en código mantenible: arquitectura limpia en backend,
+                        interfaces semánticas accesibles (WCAG 2.1 AA) y modelado de datos sólido tanto relacional
+                        como documental.
                     </p>
                     <p>
-                        Diseño modelos relacionales en <strong>PostgreSQL</strong> y documentales en
-                        <strong>MongoDB</strong> sobre contenedores Docker, y complemento la ingeniería web con
-                        análisis de datos en <strong>Python (NumPy, Pandas)</strong>, pruebas de API e integración
-                        continua con <strong>GitHub Actions</strong>.
+                        Trabajo cada proyecto desde la infraestructura reproducible en contenedores hasta la validación
+                        automática de APIs y pipelines de integración continua, cuidando rendimiento, seguridad y
+                        claridad técnica.
                     </p>
                 </div>
 
@@ -200,16 +198,20 @@
                         </div>
                         <div class="project-info">
                             <span class="project-badge">Proyecto Real</span>
-                            <h3>Floristería Labajo — Web y Gestión</h3>
+                            <h3>
+                                <a href="https://github.com/pablotome8/FloristeriaLaBajo" target="_blank"
+                                    rel="noopener noreferrer" class="project-title-link">
+                                    Floristería Labajo — Web y Gestión
+                                </a>
+                            </h3>
                             <p>
                                 Plataforma integral para la gestión interna y venta online de Floristería Labajo:
                                 catálogo para clientes conectado con control de pedidos, stock de flor fresca y
                                 logística de entregas.
                             </p>
                             <p class="project-technical-details">
-                                Persistencia y lógica de negocio sobre base de datos relacional con
-                                <strong>JDBC y SQL en Java</strong>, respaldadas por validación continua en
-                                <strong>GitHub Actions</strong>.
+                                Persistencia relacional y reglas de negocio conectadas mediante JDBC y SQL, con
+                                verificación automatizada en cada commit.
                             </p>
                             <ul class="project-tags">
                                 <li>Java</li>
@@ -235,19 +237,24 @@
                     <article class="project-card">
                         <div class="project-media">
                             <img src="images/projectAirport.svg"
-                                alt="Esquema de consultas SQL sobre la base de datos aeroportuaria" width="600"
-                                height="300" loading="lazy">
+                                alt="Esquema de consultas SQL sobre la base de datos aeroportuaria" width="640"
+                                height="360" loading="lazy">
                         </div>
                         <div class="project-info">
                             <span class="project-badge">Análisis SQL</span>
-                            <h3>Airport SQL Data Analysis</h3>
+                            <h3>
+                                <a href="https://github.com/pablotome8/proyecto4-SQL-airport-pabloTomeManzano"
+                                    target="_blank" rel="noopener noreferrer" class="project-title-link">
+                                    Airport SQL — Análisis de Aviación
+                                </a>
+                            </h3>
                             <p>
                                 Exploración analítica y consultas relacionales sobre una base de datos de aviación
-                                comercial y reservas de vuelos en <strong>PostgreSQL</strong>.
+                                comercial y reservas de vuelos.
                             </p>
                             <p class="project-technical-details">
-                                Consultas con <code>INNER JOIN</code>, filtrado de reservas de alto valor, métricas de
-                                utilización por aeronave y cálculo de retrasos con <code>INTERVAL</code>.
+                                Consultas con <code>INNER JOIN</code>, filtrado de reservas de alto valor, métricas por
+                                aeronave y cálculo temporal de retrasos con <code>INTERVAL</code>.
                             </p>
                             <ul class="project-tags">
                                 <li>PostgreSQL</li>
@@ -258,7 +265,7 @@
                             <div class="project-links">
                                 <a href="https://github.com/pablotome8/proyecto4-SQL-airport-pabloTomeManzano"
                                     target="_blank" rel="noopener noreferrer" class="project-link"
-                                    aria-label="Ver repositorio de Airport SQL Data Analysis en GitHub (abre en nueva pestaña)">
+                                    aria-label="Ver repositorio de Airport SQL en GitHub (abre en nueva pestaña)">
                                     Ver repositorio
                                     <svg class="icon-arrow" viewBox="0 0 16 16" width="15" height="15"
                                         fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"
@@ -281,18 +288,23 @@
                         </div>
                         <div class="project-info">
                             <span class="project-badge">App de Escritorio</span>
-                            <h3>HorrorLibrary — Catálogo Stephen King</h3>
+                            <h3>
+                                <a href="https://github.com/pablotome8/HorrorLibray" target="_blank"
+                                    rel="noopener noreferrer" class="project-title-link">
+                                    HorrorLibrary — Catálogo Stephen King
+                                </a>
+                            </h3>
                             <p>
                                 Aplicación de escritorio en Java para explorar, filtrar y guardar favoritos de la
                                 bibliografía completa de Stephen King.
                             </p>
                             <p class="project-technical-details">
-                                Interfaz desacoplada en <strong>JavaFX (FXML)</strong>, consumo asíncrono de API REST
-                                mediante <code>HttpClient</code> y exportación local en JSON con <strong>Gson</strong>.
+                                Interfaz desacoplada con vistas FXML, peticiones asíncronas mediante
+                                <code>HttpClient</code> y exportación local en JSON.
                             </p>
                             <ul class="project-tags">
                                 <li>Java</li>
-                                <li>JavaFX (FXML)</li>
+                                <li>JavaFX</li>
                                 <li>REST API</li>
                                 <li>Gson</li>
                             </ul>
@@ -314,20 +326,24 @@
                     <article class="project-card">
                         <div class="project-media">
                             <img src="images/projectPython.svg"
-                                alt="Diagrama de ejercicios de algoritmia y POO en Python" width="600" height="300"
+                                alt="Diagrama de ejercicios de algoritmia y POO en Python" width="640" height="360"
                                 loading="lazy">
                         </div>
                         <div class="project-info">
                             <span class="project-badge">Algoritmia</span>
-                            <h3>Python Algorithms &amp; Katas</h3>
+                            <h3>
+                                <a href="https://github.com/pablotome8/proyecto3-katas-python-pabloTomeManzano"
+                                    target="_blank" rel="noopener noreferrer" class="project-title-link">
+                                    Python Katas — Algoritmia y POO
+                                </a>
+                            </h3>
                             <p>
-                                Colección de 40 ejercicios de algoritmia resueltos en <strong>Python</strong> y
-                                documentados en <strong>Jupyter Notebook</strong>.
+                                Colección de 40 ejercicios de algoritmia resueltos y documentados en cuaderno
+                                interactivo.
                             </p>
                             <p class="project-technical-details">
                                 Programación funcional (<code>map</code>, <code>filter</code>, <code>reduce</code>),
-                                excepciones personalizadas, Type Hints y POO con las clases <code>Arbol</code> y
-                                <code>UsuarioBanco</code>.
+                                excepciones personalizadas y clases <code>Arbol</code> y <code>UsuarioBanco</code>.
                             </p>
                             <ul class="project-tags">
                                 <li>Python</li>
@@ -338,7 +354,7 @@
                             <div class="project-links">
                                 <a href="https://github.com/pablotome8/proyecto3-katas-python-pabloTomeManzano"
                                     target="_blank" rel="noopener noreferrer" class="project-link"
-                                    aria-label="Ver repositorio de Python Algorithms and Katas en GitHub (abre en nueva pestaña)">
+                                    aria-label="Ver repositorio de Python Katas en GitHub (abre en nueva pestaña)">
                                     Ver repositorio
                                     <svg class="icon-arrow" viewBox="0 0 16 16" width="15" height="15"
                                         fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"
@@ -357,28 +373,10 @@
             <div class="section-container">
                 <h2>Contacto</h2>
                 <p class="contact-lead">
-                    Disponible para prácticas DAW, proyectos web o puestos junior en Oviedo y remoto. Hablemos por
-                    GitHub o LinkedIn.
+                    Disponible para prácticas DAW, proyectos web o puestos junior en Oviedo y remoto. Escríbeme por
+                    LinkedIn o explora mis repositorios en GitHub.
                 </p>
                 <div class="contact-links">
-                    <a class="contact-card" href="https://github.com/pablotome8" target="_blank"
-                        rel="noopener noreferrer" aria-label="Perfil de GitHub de Pablo Tomé (abre en nueva pestaña)">
-                        <svg class="contact-icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"
-                            focusable="false">
-                            <path
-                                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8" />
-                        </svg>
-                        <span class="contact-text">
-                            <span class="contact-name">GitHub</span>
-                            <span class="contact-handle">@pablotome8</span>
-                        </span>
-                        <svg class="contact-arrow" viewBox="0 0 16 16" width="18" height="18" fill="none"
-                            stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"
-                            aria-hidden="true" focusable="false">
-                            <path d="M4.5 11.5 11.5 4.5M6 4.5h5.5V10" />
-                        </svg>
-                    </a>
-
                     <a class="contact-card" href="https://www.linkedin.com/in/pablotomemanzano/" target="_blank"
                         rel="noopener noreferrer" aria-label="Perfil de LinkedIn de Pablo Tomé (abre en nueva pestaña)">
                         <svg class="contact-icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"
@@ -389,6 +387,24 @@
                         <span class="contact-text">
                             <span class="contact-name">LinkedIn</span>
                             <span class="contact-handle">Pablo Tomé Manzano</span>
+                        </span>
+                        <svg class="contact-arrow" viewBox="0 0 16 16" width="18" height="18" fill="none"
+                            stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"
+                            aria-hidden="true" focusable="false">
+                            <path d="M4.5 11.5 11.5 4.5M6 4.5h5.5V10" />
+                        </svg>
+                    </a>
+
+                    <a class="contact-card" href="https://github.com/pablotome8" target="_blank"
+                        rel="noopener noreferrer" aria-label="Perfil de GitHub de Pablo Tomé (abre en nueva pestaña)">
+                        <svg class="contact-icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"
+                            focusable="false">
+                            <path
+                                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8" />
+                        </svg>
+                        <span class="contact-text">
+                            <span class="contact-name">GitHub</span>
+                            <span class="contact-handle">@pablotome8</span>
                         </span>
                         <svg class="contact-arrow" viewBox="0 0 16 16" width="18" height="18" fill="none"
                             stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"
@@ -414,6 +430,34 @@
             </a>
         </div>
     </footer>
+
+    <script>
+        const navLinks = new Map(
+            Array.from(document.querySelectorAll('.nav-link[href^="#"]'), (link) => [
+                link.getAttribute('href').slice(1),
+                link,
+            ])
+        );
+        const setCurrentSection = (id) => {
+            navLinks.forEach((link, key) => {
+                if (key === id) link.setAttribute('aria-current', 'location');
+                else link.removeAttribute('aria-current');
+            });
+        };
+        const observer = new IntersectionObserver(
+            (entries) => {
+                const visible = entries.filter((e) => e.isIntersecting).sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+                if (visible.length) setCurrentSection(visible[0].target.id);
+            },
+            { rootMargin: '-25% 0px -55% 0px', threshold: [0.1, 0.4] }
+        );
+        document.querySelectorAll('main > section[id]').forEach((section) => observer.observe(section));
+        window.addEventListener('scroll', () => {
+            if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 24) {
+                setCurrentSection('contact');
+            }
+        }, { passive: true });
+    </script>
 </body>
 
 </html>
