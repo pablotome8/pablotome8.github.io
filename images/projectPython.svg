@@ -29,6 +29,6 @@
     <circle cx="155" cy="105" r="9" fill="#38bdf8"/>
     <circle cx="100" cy="80" r="16" fill="rgba(16,185,129,0.2)"/>
   </g>
-  <text x="350" y="215" font-family="system-ui, sans-serif" font-weight="700" font-size="22" fill="#f8fafc">Python Algorithms</text>
-  <text x="350" y="240" font-family="system-ui, sans-serif" font-weight="500" font-size="13" fill="#38bdf8">Jupyter Notebook • POO • Functional</text>
+  <text x="455" y="215" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="700" font-size="22" fill="#f8fafc">Python Algorithms</text>
+  <text x="455" y="240" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="500" font-size="12" fill="#38bdf8">Jupyter Notebook • POO • Functional</text>
 </svg>
