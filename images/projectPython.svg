@@ -1,22 +1,21 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
   <defs>
-    <radialGradient id="pythonGlow" cx="24%" cy="24%" r="70%">
+    <radialGradient id="pythonGlow" cx="25%" cy="28%" r="68%">
       <stop offset="0%" stop-color="#142821" />
       <stop offset="100%" stop-color="#091310" />
     </radialGradient>
   </defs>
   <rect width="640" height="360" fill="url(#pythonGlow)" />
-  <rect x="48" y="48" width="544" height="184" rx="10" fill="#0f1e19" stroke="#22d398" stroke-opacity="0.24" stroke-width="1" />
-  <text x="72" y="78" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="12" fill="#22d398">In [40]:</text>
-  <text x="142" y="78" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="12" fill="#9eb7ad">katasPython.ipynb · Type Hints &amp; POO</text>
-  <line x1="72" y1="92" x2="568" y2="92" stroke="#9eb7ad" stroke-opacity="0.16" stroke-width="1" />
-  <text x="72" y="120" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="12.5" fill="#22d398">class Arbol:</text>
-  <text x="92" y="144" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="12.5" fill="#eef5f2">def info_arbol(self) -&gt; dict[str, int | list[int]]:</text>
-  <text x="112" y="168" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="12.5" fill="#9eb7ad">ramas = list(filter(lambda r: r &gt; 0, self.ramas))</text>
-  <text x="72" y="194" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="12.5" fill="#eef5f2">saldo = reduce(lambda a, b: a + b, movimientos, 0)</text>
-  <text x="72" y="216" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="12" fill="#9eb7ad">except SaldoInsuficienteError as err: ...</text>
+  <rect x="44" y="56" width="184" height="248" rx="14" fill="#142821" stroke="#22d398" stroke-opacity="0.45" stroke-width="2" />
+  <text x="136" y="176" text-anchor="middle" font-family="sans-serif" font-size="72" font-weight="700" fill="#22d398">40</text>
+  <text x="136" y="224" text-anchor="middle" font-family="monospace" font-size="24" font-weight="700" fill="#eef5f2">KATAS</text>
 
-  <rect x="48" y="248" width="544" height="64" rx="10" fill="#142821" stroke="#22d398" stroke-opacity="0.3" stroke-width="1" />
-  <text x="72" y="285" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="13" fill="#22d398">Out [40]:</text>
-  <text x="152" y="285" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="13" font-weight="600" fill="#eef5f2">40/40 katas verificadas · map · filter · reduce · POO</text>
+  <rect x="252" y="56" width="344" height="68" rx="12" fill="#0f1e19" stroke="#9eb7ad" stroke-opacity="0.24" stroke-width="1.5" />
+  <text x="280" y="98" font-family="monospace" font-size="22" font-weight="700" fill="#eef5f2">map · filter · reduce</text>
+
+  <rect x="252" y="146" width="344" height="68" rx="12" fill="#0f1e19" stroke="#9eb7ad" stroke-opacity="0.24" stroke-width="1.5" />
+  <text x="280" y="188" font-family="sans-serif" font-size="22" font-weight="600" fill="#22d398">Type Hints &amp; Excepciones</text>
+
+  <rect x="252" y="236" width="344" height="68" rx="12" fill="#0f1e19" stroke="#9eb7ad" stroke-opacity="0.24" stroke-width="1.5" />
+  <text x="280" y="278" font-family="monospace" font-size="22" font-weight="700" fill="#eef5f2">POO · Jupyter (.ipynb)</text>
 </svg>

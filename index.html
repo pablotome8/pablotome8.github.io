@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=IBM+Plex+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
     <link rel="stylesheet" href="styles.css">
     <meta property="og:title" content="Pablo Tomé | Desarrollador Full Stack">
     <meta property="og:type" content="website">
@@ -53,17 +53,40 @@
     <main id="main-content">
         <section id="hero-section" class="hero-section">
             <div class="hero-content">
-                <h1>Pablo Tomé</h1>
-                <p class="hero-role">Desarrollador Full Stack · Backend y Datos</p>
-                <p class="hero-lead">
-                    Estudiante de 2.º de <strong>Desarrollo de Aplicaciones Web (DAW)</strong> en Oviedo. Diseño
-                    aplicaciones web orientadas a producto, bases de datos robustas y pipelines de datos listos para
-                    producción. Disponible para prácticas y puestos junior en Oviedo o remoto.
-                </p>
-                <div class="hero-actions">
-                    <a href="#projects" class="btn-primary">Ver proyectos</a>
-                    <a href="#contact" class="btn-secondary">Contactar</a>
+                <div class="hero-main">
+                    <h1>Pablo Tomé</h1>
+                    <p class="hero-role">Desarrollador Full Stack · Backend y Datos</p>
+                    <p class="hero-lead">
+                        Estudiante de 2.º de <strong>Desarrollo de Aplicaciones Web (DAW)</strong> en Oviedo. Diseño
+                        aplicaciones web orientadas a producto, bases de datos robustas y pipelines de datos listos
+                        para producción. Disponible para prácticas y puestos junior en Oviedo o remoto.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn-primary">Ver proyectos</a>
+                        <a href="#contact" class="btn-secondary">Contactar</a>
+                    </div>
                 </div>
+
+                <aside class="hero-dossier" aria-label="Resumen profesional">
+                    <dl class="dossier-list">
+                        <div class="dossier-row">
+                            <dt>Ubicación</dt>
+                            <dd>Oviedo · Remoto</dd>
+                        </div>
+                        <div class="dossier-row">
+                            <dt>Disponibilidad</dt>
+                            <dd>Prácticas DAW y puesto junior</dd>
+                        </div>
+                        <div class="dossier-row">
+                            <dt>Enfoque</dt>
+                            <dd>Backend, Web y Datos</dd>
+                        </div>
+                        <div class="dossier-row">
+                            <dt>Stack núcleo</dt>
+                            <dd>Java · PHP · Node.js · PostgreSQL · Python</dd>
+                        </div>
+                    </dl>
+                </aside>
             </div>
         </section>
 
@@ -198,12 +221,7 @@
                         </div>
                         <div class="project-info">
                             <span class="project-badge">Proyecto Real</span>
-                            <h3>
-                                <a href="https://github.com/pablotome8/FloristeriaLaBajo" target="_blank"
-                                    rel="noopener noreferrer" class="project-title-link">
-                                    Floristería Labajo — Web y Gestión
-                                </a>
-                            </h3>
+                            <h3>Floristería Labajo — Web y Gestión</h3>
                             <p>
                                 Plataforma integral para la gestión interna y venta online de Floristería Labajo:
                                 catálogo para clientes conectado con control de pedidos, stock de flor fresca y
@@ -237,17 +255,12 @@
                     <article class="project-card">
                         <div class="project-media">
                             <img src="images/projectAirport.svg"
-                                alt="Esquema de consultas SQL sobre la base de datos aeroportuaria" width="640"
+                                alt="Esquema relacional y métricas SQL sobre la base de datos aeroportuaria" width="640"
                                 height="360" loading="lazy">
                         </div>
                         <div class="project-info">
                             <span class="project-badge">Análisis SQL</span>
-                            <h3>
-                                <a href="https://github.com/pablotome8/proyecto4-SQL-airport-pabloTomeManzano"
-                                    target="_blank" rel="noopener noreferrer" class="project-title-link">
-                                    Airport SQL — Análisis de Aviación
-                                </a>
-                            </h3>
+                            <h3>Airport SQL — Análisis de Aviación</h3>
                             <p>
                                 Exploración analítica y consultas relacionales sobre una base de datos de aviación
                                 comercial y reservas de vuelos.
@@ -288,12 +301,7 @@
                         </div>
                         <div class="project-info">
                             <span class="project-badge">App de Escritorio</span>
-                            <h3>
-                                <a href="https://github.com/pablotome8/HorrorLibray" target="_blank"
-                                    rel="noopener noreferrer" class="project-title-link">
-                                    HorrorLibrary — Catálogo Stephen King
-                                </a>
-                            </h3>
+                            <h3>HorrorLibrary — Catálogo Stephen King</h3>
                             <p>
                                 Aplicación de escritorio en Java para explorar, filtrar y guardar favoritos de la
                                 bibliografía completa de Stephen King.
@@ -326,17 +334,12 @@
                     <article class="project-card">
                         <div class="project-media">
                             <img src="images/projectPython.svg"
-                                alt="Diagrama de ejercicios de algoritmia y POO en Python" width="640" height="360"
-                                loading="lazy">
+                                alt="Resumen visual de 40 katas de algoritmia, programación funcional y POO en Python"
+                                width="640" height="360" loading="lazy">
                         </div>
                         <div class="project-info">
                             <span class="project-badge">Algoritmia</span>
-                            <h3>
-                                <a href="https://github.com/pablotome8/proyecto3-katas-python-pabloTomeManzano"
-                                    target="_blank" rel="noopener noreferrer" class="project-title-link">
-                                    Python Katas — Algoritmia y POO
-                                </a>
-                            </h3>
+                            <h3>Python Katas — Algoritmia y POO</h3>
                             <p>
                                 Colección de 40 ejercicios de algoritmia resueltos y documentados en cuaderno
                                 interactivo.
@@ -432,6 +435,8 @@
     </footer>
 
     <script>
+        const headerEl = document.querySelector('.site-header');
+        const sections = Array.from(document.querySelectorAll('main > section[id]'));
         const navLinks = new Map(
             Array.from(document.querySelectorAll('.nav-link[href^="#"]'), (link) => [
                 link.getAttribute('href').slice(1),
@@ -444,19 +449,33 @@
                 else link.removeAttribute('aria-current');
             });
         };
-        const observer = new IntersectionObserver(
-            (entries) => {
-                const visible = entries.filter((e) => e.isIntersecting).sort((a, b) => b.intersectionRatio - a.intersectionRatio);
-                if (visible.length) setCurrentSection(visible[0].target.id);
-            },
-            { rootMargin: '-25% 0px -55% 0px', threshold: [0.1, 0.4] }
-        );
-        document.querySelectorAll('main > section[id]').forEach((section) => observer.observe(section));
-        window.addEventListener('scroll', () => {
+        const updateCurrentSection = () => {
             if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 24) {
                 setCurrentSection('contact');
+                return;
             }
-        }, { passive: true });
+            const headerHeight = headerEl ? headerEl.offsetHeight : 70;
+            const thresholdY = headerHeight + 96;
+            let activeId = sections[0]?.id || 'hero-section';
+            for (const section of sections) {
+                if (section.getBoundingClientRect().top <= thresholdY) {
+                    activeId = section.id;
+                }
+            }
+            setCurrentSection(activeId);
+        };
+        let ticking = false;
+        const onScrollOrResize = () => {
+            if (ticking) return;
+            ticking = true;
+            requestAnimationFrame(() => {
+                updateCurrentSection();
+                ticking = false;
+            });
+        };
+        window.addEventListener('scroll', onScrollOrResize, { passive: true });
+        window.addEventListener('resize', onScrollOrResize, { passive: true });
+        updateCurrentSection();
     </script>
 </body>
 
