@@ -474,15 +474,19 @@ code {
 .stack-items {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
   gap: 0.55rem;
   list-style: none;
 }
 
 .stack-item {
+  flex: 1 1 120px;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
-  padding: 0.42rem 0.78rem;
+  padding: 0.48rem 0.85rem;
   background-color: var(--bg-surface);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-sm);
