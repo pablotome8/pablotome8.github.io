@@ -1,4 +1,66 @@
 /**
+ * Gestiona el cambio manual entre modo claro y oscuro con persistencia
+ * y sincronización automática con prefers-color-scheme si no hay preferencia guardada.
+ */
+const initThemeToggle = () => {
+  const toggleBtn = document.querySelector(".theme-toggle");
+  if (!toggleBtn) return;
+
+  const root = document.documentElement;
+  const mediaQuery = window.matchMedia("(prefers-color-scheme: light)");
+
+  const getStoredTheme = () => {
+    try {
+      const stored = localStorage.getItem("theme");
+      return stored === "light" || stored === "dark" ? stored : null;
+    } catch {
+      return null;
+    }
+  };
+
+  const setStoredTheme = (theme) => {
+    try {
+      localStorage.setItem("theme", theme);
+    } catch {
+      // Ignorar si el almacenamiento está bloqueado
+    }
+  };
+
+  const applyTheme = (theme) => {
+    root.dataset.theme = theme;
+    const isLight = theme === "light";
+    toggleBtn.setAttribute("aria-pressed", String(isLight));
+    toggleBtn.setAttribute(
+      "aria-label",
+      isLight ? "Cambiar a modo oscuro" : "Cambiar a modo claro",
+    );
+    toggleBtn.setAttribute(
+      "title",
+      isLight ? "Cambiar a modo oscuro" : "Cambiar a modo claro",
+    );
+  };
+
+  const initialTheme =
+    root.dataset.theme === "light" || root.dataset.theme === "dark"
+      ? root.dataset.theme
+      : getStoredTheme() || (mediaQuery.matches ? "light" : "dark");
+
+  applyTheme(initialTheme);
+
+  toggleBtn.addEventListener("click", () => {
+    const nextTheme = root.dataset.theme === "light" ? "dark" : "light";
+    applyTheme(nextTheme);
+    setStoredTheme(nextTheme);
+  });
+
+  mediaQuery.addEventListener("change", (event) => {
+    if (!getStoredTheme()) {
+      applyTheme(event.matches ? "light" : "dark");
+    }
+  });
+};
+
+/**
  * Sincroniza `aria-current="location"` en la navegación según la sección visible.
  */
 const initScrollSpy = () => {
@@ -60,4 +122,5 @@ const initScrollSpy = () => {
   updateCurrentSection();
 };
 
+initThemeToggle();
 initScrollSpy();
